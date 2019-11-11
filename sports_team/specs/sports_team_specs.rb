@@ -24,7 +24,7 @@ class TestSportsTeam < MiniTest::Test
 
   def test_set_coach_name()
     new_coach_name = SportsTeam.new("Celtic", ["Jinky", "Bobo", "Petrov"], "Rodgers")
-    new_coach_name.set_coach_name("O'Neil")
+    new_coach_name.coach = "O'Neil"
     assert_equal("O'Neil", new_coach_name.coach)
   end
 end
