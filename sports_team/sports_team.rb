@@ -5,6 +5,7 @@ class SportsTeam
     @team = team
     @players = players
     @coach = coach
+    @points = 0
   end
 
   def add_new_player(player)
