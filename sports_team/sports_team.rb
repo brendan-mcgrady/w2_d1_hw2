@@ -1,5 +1,5 @@
 class SportsTeam
-  attr_accessor :team, :players, :coach
+  attr_accessor :team, :players, :coach, :points
 
   def initialize(team, players, coach)
     @team = team
@@ -16,5 +16,15 @@ class SportsTeam
     if @players.include?(players)
       return true
     end
+  end
+
+  def new_points(result)
+    if result == "win"
+      @points += 3
+    elsif result == "lose"
+      @points -= 3
+    else
+    end
+    return @points
   end
 end

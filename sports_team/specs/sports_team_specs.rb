@@ -41,7 +41,10 @@ class TestSportsTeam < MiniTest::Test
   end
 
   def test_points()
-    points = SportsTeam.new("Celtic", ["Jinky", "Bobo", "Petrov"], "Rodgers")
-    
+    celtic = SportsTeam.new("Celtic", ["Jinky", "Bobo", "Petrov"], "Rodgers")
+    points = celtic.new_points("win")
+    assert_equal(3, points)
+    points = celtic.new_points("lose")
+    assert_equal(0, points)
   end
 end
