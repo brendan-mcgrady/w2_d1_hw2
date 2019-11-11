@@ -27,4 +27,16 @@ class TestSportsTeam < MiniTest::Test
     new_coach_name.coach = "O'Neil"
     assert_equal("O'Neil", new_coach_name.coach)
   end
+
+  def test_add_new_player()
+    new_player = SportsTeam.new("Celtic", ["Jinky", "Bobo", "Petrov"], "Rodgers")
+    new_player.add_new_player("Larrson")
+    assert_equal(["Jinky", "Bobo", "Petrov", "Larrson"], new_player.players)
+  end
+
+#   def test_pay_into_account()
+#   sarahs_bank_account = SportsT.new("Sarah", 10, "personal")
+#   sarahs_bank_account.pay_in(5)
+#   assert_equal(15, sarahs_bank_account.balance)
+# end
 end

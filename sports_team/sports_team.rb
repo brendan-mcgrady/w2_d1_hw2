@@ -7,4 +7,8 @@ class SportsTeam
     @coach = coach
   end
 
+  def add_new_player(player)
+    @players.push(player)
+  end
+
 end
